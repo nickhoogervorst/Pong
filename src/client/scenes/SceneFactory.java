@@ -1,7 +1,7 @@
 package client.scenes;
 
+import client.scenes.startScreen.StartScreen;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
 
 public class SceneFactory {
 
@@ -10,7 +10,7 @@ public class SceneFactory {
     }
 
     public Scene createStartScreen(){
-        Pane pane = new Pane();
+        StartScreen pane = new StartScreen();
         Scene scene = new Scene(pane);
         return scene;
     }
