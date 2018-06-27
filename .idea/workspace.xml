@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe564f62-0eee-4307-ae98-5326d79f67b7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/client/game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/scenes/BasePane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/scenes/game/GamePane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/client/scenes/ball/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/scenes/SceneChanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneChanger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/scenes/SceneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/scenes/SceneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/scenes/SceneModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/scenes/SceneView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/scenes/startScreen/StartScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/startScreen/StartScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/game/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/scenes/game/GamePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/game/GamePane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,23 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BasePane.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/scenes/BasePane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StartScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/scenes/startScreen/StartScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+            <state relative-caret-position="66">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,20 +34,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SceneModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneModel.java">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RectangleBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java">
+      <file leaf-file-name="RectangleRight.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+            <state relative-caret-position="136">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,55 +67,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SceneView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/game/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GamePane.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GamePane.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/scenes/game/GamePane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+            <state relative-caret-position="1137">
+              <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SceneController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneController.java">
+      <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/scenes/ball/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="714">
+              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SceneFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RectangleLeft.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RectangleBase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SceneFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,19 +147,20 @@
         <option value="$PROJECT_DIR$/src/client/scenes/SceneChanger.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/SceneFactory.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/inGameButton.java" />
-        <option value="$PROJECT_DIR$/src/client/Client.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/Rectangles.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/RectangleLeft.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/RectangleRight.java" />
-        <option value="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java" />
-        <option value="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java" />
-        <option value="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/BasePane.java" />
-        <option value="$PROJECT_DIR$/src/client/scenes/game/GamePane.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/startScreen/StartScreen.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneChanger.java" />
         <option value="$PROJECT_DIR$/src/client/game/Game.java" />
+        <option value="$PROJECT_DIR$/src/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/client/scenes/ball/Ball.java" />
+        <option value="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java" />
         <option value="$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneFactory.java" />
+        <option value="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java" />
+        <option value="$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java" />
+        <option value="$PROJECT_DIR$/src/client/scenes/game/GamePane.java" />
       </list>
     </option>
   </component>
@@ -226,7 +214,7 @@
               <item name="Pong" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
@@ -234,6 +222,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="ball" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pong" type="b2602c69:ProjectViewProjectNode" />
@@ -366,7 +355,7 @@
       <option name="presentableId" value="Default" />
       <updated>1530037582936</updated>
       <workItem from="1530037587633" duration="8230000" />
-      <workItem from="1530135135981" duration="2017000" />
+      <workItem from="1530135135981" duration="7208000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1530038944243</created>
@@ -379,7 +368,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10247000" />
+    <option name="totallyTimeSpent" value="15438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -394,7 +383,7 @@
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5013423" side_tool="true" weight="0.32905984" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.4986577" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4986577" visible="true" weight="0.32905984" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info id="Capture Tool" order="2" />
@@ -527,38 +516,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/scenes/BasePane.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -570,32 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/scenes/game/GamePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,16 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/scenes/startScreen/StartScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -640,10 +567,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/scenes/startScreen/StartScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleRight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/scenes/sceneMVC/SceneFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleLeft.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/scenes/ball/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/scenes/rectangle/RectangleBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="86" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/scenes/game/GamePane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1137">
+          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
