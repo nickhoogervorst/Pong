@@ -1,7 +1,6 @@
 package client.scenes.rectangle;
 
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Rectangle;
 
 public class RectangleRight extends RectangleBase {
 
