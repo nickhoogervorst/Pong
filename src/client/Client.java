@@ -1,9 +1,9 @@
 package client;
 
-import client.scenes.SceneChanger;
-import client.scenes.SceneController;
-import client.scenes.SceneModel;
-import client.scenes.SceneView;
+import client.scenes.sceneMVC.SceneChanger;
+import client.scenes.sceneMVC.SceneController;
+import client.scenes.sceneMVC.SceneModel;
+import client.scenes.sceneMVC.SceneView;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

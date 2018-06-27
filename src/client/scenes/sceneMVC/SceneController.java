@@ -1,4 +1,4 @@
-package client.scenes;
+package client.scenes.sceneMVC;
 
 import javafx.scene.Scene;
 

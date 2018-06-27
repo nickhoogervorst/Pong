@@ -1,4 +1,4 @@
-package client.scenes;
+package client.scenes.sceneMVC;
 
 import javafx.scene.Scene;
 
@@ -13,7 +13,12 @@ public class SceneChanger {
     }
 
     public void createStartScreen(){
-        Scene scene = sceneFactory.createStartScreen();
+        Scene scene = sceneFactory.createStartScreen(this);
+        this.sceneController.changeScene(scene);
+    }
+
+    public void startGame(){
+        Scene scene = sceneFactory.startGame(this);
         this.sceneController.changeScene(scene);
     }
 
