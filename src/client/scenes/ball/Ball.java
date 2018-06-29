@@ -39,17 +39,25 @@ public class Ball extends Circle {
 
     public void update(){
         if(ballPosY.getValue() >= pane.heightProperty().subtract(this.radiusProperty()).getValue() && ballYSpeed > 0){
-            ballYSpeed *= -1;
+            changeYDirection();
         }
         if(ballPosY.getValue() <= this.radiusProperty().getValue() && ballYSpeed < 0){
-            ballYSpeed *= -1;
+            changeYDirection();
         }
         if(ballPosX.getValue() >= pane.widthProperty().subtract(this.radiusProperty()).getValue() && ballXSpeed > 0){
-            ballXSpeed *= -1;
+            changeXDirection();
         }
         if(ballPosX.getValue() <= this.radiusProperty().getValue() && ballXSpeed < 0){
-            ballXSpeed *= -1;
+            changeXDirection();
         }
+    }
+
+    public void changeYDirection(){
+        ballYSpeed *= -1;
+    }
+
+    public void changeXDirection(){
+        ballXSpeed *= -1;
     }
 
 }

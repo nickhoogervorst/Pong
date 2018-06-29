@@ -19,6 +19,7 @@ public class Client extends Application {
         SceneChanger sceneChanger = new SceneChanger(sceneController);
         sceneChanger.createStartScreen();
         primaryStage.show();
+        primaryStage.setOnCloseRequest(event -> System.exit(0));
         primaryStage.setTitle("Pong");
     }
 }
