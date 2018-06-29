@@ -14,13 +14,12 @@ public class Ball extends Circle {
 
     private DoubleProperty ballPosX = new SimpleDoubleProperty(500);
     private DoubleProperty ballPosY = new SimpleDoubleProperty(300);
-    private int speed = 5;
-    private int ballXSpeed = speed;
-    private int ballYSpeed = speed;
+    private double ballXSpeed = (Math.random() * 5 + 2);
+    private double ballYSpeed = (Math.random() * 5 + 2);
     private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
+        update();
         ballPosX.setValue(ballPosX.add(ballXSpeed).getValue());
         ballPosY.setValue(ballPosY.add(ballYSpeed).getValue());
-        update();
     }));
     private Pane pane;
 
@@ -40,24 +39,54 @@ public class Ball extends Circle {
     public void update(){
         if(ballPosY.getValue() >= pane.heightProperty().subtract(this.radiusProperty()).getValue() && ballYSpeed > 0){
             changeYDirection();
+            System.out.println("south");
         }
         if(ballPosY.getValue() <= this.radiusProperty().getValue() && ballYSpeed < 0){
             changeYDirection();
+            System.out.println("north");
         }
         if(ballPosX.getValue() >= pane.widthProperty().subtract(this.radiusProperty()).getValue() && ballXSpeed > 0){
             changeXDirection();
+            System.out.println("east");
         }
         if(ballPosX.getValue() <= this.radiusProperty().getValue() && ballXSpeed < 0){
             changeXDirection();
+            System.out.println("west");
         }
     }
 
     public void changeYDirection(){
+        System.out.print(ballXSpeed + " " + ballYSpeed + " - ");
+        if(ballXSpeed > 0.0) {
+            ballXSpeed = 7.0 - ballXSpeed;
+        } else if(ballXSpeed < 0.0) {
+            ballXSpeed = -7.0 - ballXSpeed;
+        }
         ballYSpeed *= -1;
+        System.out.println(ballXSpeed + " " + ballYSpeed);
     }
 
     public void changeXDirection(){
         ballXSpeed *= -1;
+    }
+
+    public DoubleProperty getBallPosY(){
+        return ballPosY;
+    }
+
+    public DoubleProperty getBallPosX(){
+        return ballPosX;
+    }
+
+    public double getBallXSpeed() { return ballXSpeed; }
+
+    public double getBallYSpeed() { return ballYSpeed; }
+
+    public void reset(){
+        ballPosX.setValue(500);
+        ballPosY.setValue(300);
+        ballXSpeed = (Math.random() * 5 + 2);
+        ballYSpeed = (Math.random() * 5 + 2);
     }
 
 }

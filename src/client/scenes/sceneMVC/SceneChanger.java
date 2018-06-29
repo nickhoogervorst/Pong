@@ -18,7 +18,7 @@ public class SceneChanger {
     }
 
     public void startGame(){
-        Scene scene = sceneFactory.startGame(this);
+        Scene scene = sceneFactory.startGame();
         this.sceneController.changeScene(scene);
     }
 

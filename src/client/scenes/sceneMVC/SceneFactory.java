@@ -16,8 +16,8 @@ public class SceneFactory {
         return scene;
     }
 
-    public Scene startGame(SceneChanger sceneChanger){
-        GamePane game = new GamePane(sceneChanger);
+    public Scene startGame(){
+        GamePane game = new GamePane();
         Scene scene = new Scene(game);
         scene.getRoot().requestFocus();
         return  scene;

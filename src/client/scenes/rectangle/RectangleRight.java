@@ -1,23 +1,8 @@
 package client.scenes.rectangle;
 
-import javafx.animation.Animation;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.scene.layout.Pane;
-import javafx.util.Duration;
 
 public class RectangleRight extends RectangleBase {
-
-    private Boolean rectangleDown = false;
-    private Boolean rectangleUp = false;
-    private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
-        if(rectangleUp){
-            rectangleHeightUp();
-        }
-        if(rectangleDown){
-            rectangleHeightDown();
-        }
-    }));
 
     public RectangleRight(Pane pane){
         super(pane);
@@ -25,28 +10,22 @@ public class RectangleRight extends RectangleBase {
         this.setOnKeyPressed(event -> {
             switch (event.getCode()){
                 case UP:
-                    rectangleDown = true;
+                    goDown();
                     break;
                 case DOWN:
-                    rectangleUp = true;
+                    goUp();
                     break;
             }
         });
         this.setOnKeyReleased(event -> {
             switch (event.getCode()){
                 case UP:
-                    rectangleDown = false;
+                    stopDown();
                     break;
                 case DOWN:
-                    rectangleUp = false;
+                    stopUp();
                     break;
             }
         });
     }
-
-    public void startTimeline(){
-        this.timeline.setCycleCount(Animation.INDEFINITE);
-        this.timeline.play();
-    }
-
 }
