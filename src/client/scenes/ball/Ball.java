@@ -14,7 +14,7 @@ public class Ball extends Circle {
 
     private DoubleProperty ballPosX = new SimpleDoubleProperty(500);
     private DoubleProperty ballPosY = new SimpleDoubleProperty(300);
-    private double ballXSpeed = (Math.random() * 5 + 2);
+    private double ballXSpeed = -(Math.random() * 5 + 2);
     private double ballYSpeed = (Math.random() * 5 + 2);
     private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
         update();
@@ -56,14 +56,7 @@ public class Ball extends Circle {
     }
 
     public void changeYDirection(){
-        System.out.print(ballXSpeed + " " + ballYSpeed + " - ");
-        if(ballXSpeed > 0.0) {
-            ballXSpeed = 7.0 - ballXSpeed;
-        } else if(ballXSpeed < 0.0) {
-            ballXSpeed = -7.0 - ballXSpeed;
-        }
         ballYSpeed *= -1;
-        System.out.println(ballXSpeed + " " + ballYSpeed);
     }
 
     public void changeXDirection(){
@@ -85,7 +78,7 @@ public class Ball extends Circle {
     public void reset(){
         ballPosX.setValue(500);
         ballPosY.setValue(300);
-        ballXSpeed = (Math.random() * 5 + 2);
+        ballXSpeed = -(Math.random() * 5 + 2);
         ballYSpeed = (Math.random() * 5 + 2);
     }
 

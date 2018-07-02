@@ -15,10 +15,10 @@ public class GamePane extends BasePane {
 
     private int player1Points = 0;
     private int player2Points = 0;
+    private Ball ball = new Ball(this);
     private Label points = new Label(player1Points + " : " + player2Points);
     private RectangleLeft rectangleLeft = new RectangleLeft(this);
-    private RectangleRight rectangleRight = new RectangleRight(this);
-    private Ball ball = new Ball(this);
+    private RectangleRight rectangleRight = new RectangleRight(this, ball);
     private Collision collision = new Collision(this, rectangleLeft, rectangleRight, ball);
     private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
         this.rectangleLeft.requestFocus();
@@ -36,6 +36,9 @@ public class GamePane extends BasePane {
         this.points.layoutYProperty().bind(this.heightProperty().divide(30));
         this.points.layoutXProperty().bind(this.widthProperty().divide(2).subtract(this.points.widthProperty()));
         this.points.setTextFill(Color.WHITE);
+        if(player1Points == 5 || player2Points == 5){
+            System.exit(0);
+        }
     }
 
     public void givePlayer1Point(){
