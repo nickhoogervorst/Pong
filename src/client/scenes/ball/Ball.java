@@ -1,5 +1,6 @@
 package client.scenes.ball;
 
+import client.scenes.game.GamePane;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,8 +15,9 @@ public class Ball extends Circle {
 
     private DoubleProperty ballPosX = new SimpleDoubleProperty(500);
     private DoubleProperty ballPosY = new SimpleDoubleProperty(300);
-    private double ballXSpeed = -(Math.random() * 5 + 2);
-    private double ballYSpeed = (Math.random() * 5 + 2);
+    private int ballSpeed = 5;
+    private double ballXSpeed;
+    private double ballYSpeed;
     private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
         update();
         ballPosX.setValue(ballPosX.add(ballXSpeed).getValue());
@@ -29,6 +31,9 @@ public class Ball extends Circle {
         this.centerXProperty().bind(ballPosX);
         this.centerYProperty().bind(ballPosY);
         this.setFill(Color.WHITE);
+        this.ballSpeed = GamePane.getBallSpeed();
+        this.ballXSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
+        this.ballYSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
     }
 
     public void startTimeLine(){
@@ -78,8 +83,8 @@ public class Ball extends Circle {
     public void reset(){
         ballPosX.setValue(500);
         ballPosY.setValue(300);
-        ballXSpeed = -(Math.random() * 5 + 2);
-        ballYSpeed = (Math.random() * 5 + 2);
+        ballXSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
+        ballYSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
     }
 
 }

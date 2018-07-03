@@ -35,11 +35,11 @@ public class Collision {
         if(ball.getBallPosX().getValue() >= rectangleRight.layoutXProperty().subtract(ball.radiusProperty()).getValue() && ball.getBallPosY().getValue() >= rectangleRight.layoutYProperty().subtract(ball.radiusProperty()).getValue() && ball.getBallPosY().getValue() <= rectangleRight.layoutYProperty().add(rectangleRight.heightProperty()).add(ball.radiusProperty()).getValue() && ball.getBallXSpeed() > 0){
             this.ball.changeXDirection();
         }
-        if(ball.getBallPosX().getValue() <= ball.radiusProperty().getValue()){
+        if(ball.getBallPosX().getValue() <= ball.radiusProperty().getValue() + 5){
             pane.givePlayer2Point();
             ball.reset();
         }
-        if(ball.getBallPosX().getValue() >= pane.widthProperty().subtract(ball.radiusProperty()).getValue()){
+        if(ball.getBallPosX().getValue() >= pane.widthProperty().subtract(ball.radiusProperty()).getValue() - 5){
             pane.givePlayer1Point();
             ball.reset();
         }
