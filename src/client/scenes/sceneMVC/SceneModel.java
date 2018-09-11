@@ -16,6 +16,10 @@ public class SceneModel {
         sceneView.update(this);
     }
 
+    public void setFullscreen(){
+        sceneView.setFullscreen();
+    }
+
     public Scene getScene(){
         return this.scene;
     }

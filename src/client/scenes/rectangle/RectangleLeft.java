@@ -12,11 +12,11 @@ public class RectangleLeft extends RectangleBase {
     private Ball ball;
     private Pane pane;
     private Timeline timeline2 = new Timeline(new KeyFrame(Duration.seconds(1.0/60), event -> {
-        if(ball.getBallPosX().getValue() <  200 && ball.getBallXSpeed() < 0) {
+        /*if(ball.getBallPosX().getValue() <  200 && ball.getBallXSpeed() < 0) {
             this.setRectangleHeight(ball.centerYProperty().add((-1 * ball.getBallYSpeed()) * (ball.centerXProperty().subtract(ball.radiusProperty()).getValue()) / ball.getBallXSpeed()).subtract(this.heightProperty().divide(2)).getValue());
         } else {
-            setRectangleHeight(250);
-        }
+            setRectangleHeight(pane.heightProperty().divide(2).getValue());
+        }*/
         this.setOnKeyPressed(event2 -> {
             switch (event2.getCode()){
                 case W:

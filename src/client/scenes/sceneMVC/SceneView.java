@@ -13,6 +13,14 @@ public class SceneView {
         sceneModel.register(this);
     }
 
+    public void setFullscreen(){
+        if(stage.isFullScreen()) {
+            stage.setFullScreen(false);
+        } else {
+            stage.setFullScreen(true);
+        }
+    }
+
     public void update(SceneModel sceneModel){
         stage.setScene(sceneModel.getScene());
     }

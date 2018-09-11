@@ -15,7 +15,7 @@ public class RectangleRight extends RectangleBase {
         if(ball.getBallPosX().getValue() > 800 && ball.getBallXSpeed() > 0) {
             this.setRectangleHeight(ball.centerYProperty().add(ball.getBallYSpeed() * (pane.widthProperty().getValue() - ball.centerXProperty().add(ball.radiusProperty()).getValue() - (pane.widthProperty().subtract(this.layoutXProperty().add(this.widthProperty())).getValue())) / ball.getBallXSpeed()).subtract(this.heightProperty().divide(2)).getValue());
         } else {
-            setRectangleHeight(250);
+            setRectangleHeight(pane.heightProperty().divide(2).getValue());
         }
     }));
 

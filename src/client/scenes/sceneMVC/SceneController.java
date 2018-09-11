@@ -14,4 +14,8 @@ public class SceneController {
         sceneModel.changeScene(scene);
     }
 
+    public void setFullscreen(){
+        sceneModel.setFullscreen();
+    }
+
 }

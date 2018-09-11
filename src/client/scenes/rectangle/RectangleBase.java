@@ -18,22 +18,22 @@ public class RectangleBase extends Rectangle {
     private Boolean rectangleUp = false;
     private DoubleProperty rectangleHeight;
     private int rectSpeed = 10;
-    private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
-        if(rectangleUp){
+    private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0 / 60.0), event -> {
+        if (rectangleUp) {
             rectangleHeightUp();
         }
-        if(rectangleDown){
+        if (rectangleDown) {
             rectangleHeightDown();
         }
-        if(this.layoutYProperty().getValue() > rectangleHeight.getValue() && this.layoutYProperty().getValue() > 0){
+        if (this.layoutYProperty().getValue() > rectangleHeight.getValue() && this.layoutYProperty().getValue() > 0) {
             this.layoutYProperty().setValue(this.layoutYProperty().getValue() - rectSpeed);
         }
-        if(this.layoutYProperty().getValue() < rectangleHeight.getValue() && this.layoutYProperty().getValue() < 500){
+        if (this.layoutYProperty().getValue() < rectangleHeight.getValue() && this.layoutYProperty().getValue() < pane.heightProperty().subtract(this.heightProperty().get()).getValue()) {
             this.layoutYProperty().setValue(this.layoutYProperty().getValue() + rectSpeed);
         }
     }));
 
-    RectangleBase(Pane pane){
+    RectangleBase(Pane pane) {
         this.pane = pane;
         this.layoutYProperty().setValue(250);
         this.rectangleHeight = new SimpleDoubleProperty(250);
@@ -44,44 +44,44 @@ public class RectangleBase extends Rectangle {
         System.out.println(rectSpeed);
     }
 
-    void rectangleHeightUp(){
-        if(rectangleHeight.getValue() < 500) {
+    void rectangleHeightUp() {
+        if (rectangleHeight.getValue() < pane.heightProperty().subtract(this.heightProperty()).getValue()) {
             rectangleHeight.setValue(rectangleHeight.getValue() + rectSpeed);
         }
     }
 
-    void rectangleHeightDown(){
-        if(rectangleHeight.getValue() > 0) {
+    void rectangleHeightDown() {
+        if (rectangleHeight.getValue() > 0) {
             rectangleHeight.setValue(rectangleHeight.getValue() - rectSpeed);
         }
     }
 
-    public void startTimeline(){
+    public void startTimeline() {
         this.timeline.setCycleCount(Animation.INDEFINITE);
         this.timeline.play();
     }
 
-    public void setRectangleHeight(double i){
+    DoubleProperty getRectangleHeight() {
+        return rectangleHeight;
+    }
+
+    public void setRectangleHeight(double i) {
         this.rectangleHeight.setValue(i);
     }
 
-    DoubleProperty getRectangleHeight(){
-        return  rectangleHeight;
-    }
-
-    void goUp(){
+    void goUp() {
         rectangleUp = true;
     }
 
-    void goDown(){
+    void goDown() {
         rectangleDown = true;
     }
 
-    void stopUp(){
+    void stopUp() {
         rectangleUp = false;
     }
 
-    void stopDown(){
+    void stopDown() {
         rectangleDown = false;
     }
 }

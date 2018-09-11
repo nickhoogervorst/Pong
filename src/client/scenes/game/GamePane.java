@@ -4,6 +4,8 @@ import client.scenes.BasePane;
 import client.scenes.ball.Ball;
 import client.scenes.rectangle.RectangleLeft;
 import client.scenes.rectangle.RectangleRight;
+import client.scenes.sceneMVC.SceneController;
+import client.scenes.sceneMVC.SceneView;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -32,9 +34,8 @@ public class GamePane extends BasePane {
         this.rectangleLeft.requestFocus();
     }));
 
-    public GamePane(){
+    public GamePane(SceneController sceneController){
         this.getChildren().addAll(this.points, this.rectangleLeft, this.rectangleRight, this.ball);
-        this.rectangleLeft.requestFocus();
         this.ball.startTimeLine();
         this.rectangleLeft.startTimeline();
         this.rectangleLeft.startTimeline2();
@@ -44,8 +45,15 @@ public class GamePane extends BasePane {
         this.timeline.setCycleCount(Animation.INDEFINITE);
         this.timeline.play();
         this.points.layoutYProperty().bind(this.heightProperty().divide(30));
-        this.points.layoutXProperty().bind(this.widthProperty().divide(2).subtract(this.points.widthProperty()));
+        this.points.layoutXProperty().bind(this.widthProperty().divide(2).subtract(this.points.widthProperty().divide(2)));
         this.points.setTextFill(Color.WHITE);
+
+        this.setOnKeyPressed(event -> {
+            switch (event.getCode()){
+                case F:
+                    sceneController.setFullscreen();
+            }
+        });
     }
 
     public void givePlayer1Point(){

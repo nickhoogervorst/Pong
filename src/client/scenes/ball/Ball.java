@@ -28,13 +28,13 @@ public class Ball extends Circle {
 
     public Ball(Pane pane){
         this.pane = pane;
-        this.radiusProperty().bind(pane.heightProperty().divide(30));
+        this.setRadius(20);
         this.centerXProperty().bind(ballPosX);
         this.centerYProperty().bind(ballPosY);
         this.setFill(Color.WHITE);
         this.ballSpeed = GamePane.getBallSpeed();
-        this.ballXSpeed = (Math.random() * 8);// * (ballSpeed / 4) + ballSpeed);
-        this.ballYSpeed = (Math.random() * 8);// * (ballSpeed / 4) + ballSpeed);
+        this.ballXSpeed = (Math.random() * 5 + 5);// * (ballSpeed / 4) + ballSpeed);
+        this.ballYSpeed = (Math.random() * 5 + 5);// * (ballSpeed / 4) + ballSpeed);
     }
 
     public void startTimeLine(){
@@ -67,14 +67,8 @@ public class Ball extends Circle {
 
     public void changeXDirection(Rectangle rectangle){
         ballXSpeed *= -1;
-        if(this.getCenterY() > rectangle.getLayoutY() + rectangle.getHeight() / 2) {
-            ballYSpeed = map(this.getCenterY() - (rectangle.getLayoutY() + rectangle.getHeight() / 2), 0, 50, 0, 8);// * (ballSpeed / 4) + ballSpeed);
-            System.out.println("bounce");
-        }
-        if(this.getCenterY() < rectangle.getLayoutY() + rectangle.getHeight() / 2) {
-            ballYSpeed = -map((rectangle.getLayoutY() + rectangle.getHeight() / 2) - this.getCenterY(), 0, 50, 0, 8);// * (ballSpeed / 4) + ballSpeed);
-            System.out.println("bounce");
-        }
+        ballYSpeed = map(this.getCenterY() - rectangle.getLayoutY(), 0, 100, -5, 5);// * (ballSpeed / 4) + ballSpeed);
+        System.out.println("bounce");
     }
 
     public DoubleProperty getBallPosY(){
@@ -90,10 +84,10 @@ public class Ball extends Circle {
     public double getBallYSpeed() { return ballYSpeed; }
 
     public void reset(){
-        ballPosX.setValue(500);
+        ballPosX.setValue(600);
         ballPosY.setValue(300);
-        ballXSpeed = (Math.random() * 8);
-        ballYSpeed = (Math.random() * 8);
+        ballXSpeed = (Math.random() * 5 + 5);
+        ballYSpeed = (Math.random() * 5 + 5);
     }
 
     private double map(double value, double low1, double high1, double low2, double high2) {
