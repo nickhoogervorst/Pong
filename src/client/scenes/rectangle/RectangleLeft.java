@@ -17,24 +17,20 @@ public class RectangleLeft extends RectangleBase {
         } else {
             setRectangleHeight(250);
         }
-    }));
-
-    public RectangleLeft(Pane pane){
-        super(pane);
-        this.pane = pane;
-        this.layoutXProperty().bind(pane.widthProperty().multiply(1.0/100));
-        this.setOnKeyPressed(event -> {
-            switch (event.getCode()){
+        this.setOnKeyPressed(event2 -> {
+            switch (event2.getCode()){
                 case W:
                     goDown();
+                    System.out.println("up");
                     break;
                 case S:
                     goUp();
+                    System.out.println("down");
                     break;
             }
         });
-        this.setOnKeyReleased(event -> {
-            switch (event.getCode()){
+        this.setOnKeyReleased(event2 -> {
+            switch (event2.getCode()){
                 case W:
                     stopDown();
                     break;
@@ -43,6 +39,12 @@ public class RectangleLeft extends RectangleBase {
                     break;
             }
         });
+    }));
+
+    public RectangleLeft(Pane pane){
+        super(pane);
+        this.pane = pane;
+        this.layoutXProperty().bind(pane.widthProperty().multiply(1.0/100));
     }
 
     public RectangleLeft(Pane pane, Ball ball){

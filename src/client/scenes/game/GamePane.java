@@ -23,17 +23,18 @@ public class GamePane extends BasePane {
     private RectangleRight rectangleRight = new RectangleRight(this, ball);
     private Collision collision = new Collision(this, rectangleLeft, rectangleRight, ball);
     private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
-        this.rectangleLeft.requestFocus();
         this.points.setText(player1Points + " : " + player2Points);
         if(player1Points == 5 || player2Points == 5){
             System.out.println("Player 1: " + player1Points);
             System.out.println("Player 2: " + player2Points);
             System.exit(0);
         }
+        this.rectangleLeft.requestFocus();
     }));
 
     public GamePane(){
         this.getChildren().addAll(this.points, this.rectangleLeft, this.rectangleRight, this.ball);
+        this.rectangleLeft.requestFocus();
         this.ball.startTimeLine();
         this.rectangleLeft.startTimeline();
         this.rectangleLeft.startTimeline2();

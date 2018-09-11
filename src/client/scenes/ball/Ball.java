@@ -9,13 +9,14 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
 public class Ball extends Circle {
 
     private DoubleProperty ballPosX = new SimpleDoubleProperty(500);
     private DoubleProperty ballPosY = new SimpleDoubleProperty(300);
-    private int ballSpeed = 5;
+    private int ballSpeed = 1;
     private double ballXSpeed;
     private double ballYSpeed;
     private Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1.0/60.0), event -> {
@@ -32,8 +33,8 @@ public class Ball extends Circle {
         this.centerYProperty().bind(ballPosY);
         this.setFill(Color.WHITE);
         this.ballSpeed = GamePane.getBallSpeed();
-        this.ballXSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
-        this.ballYSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
+        this.ballXSpeed = (Math.random() * 8);// * (ballSpeed / 4) + ballSpeed);
+        this.ballYSpeed = (Math.random() * 8);// * (ballSpeed / 4) + ballSpeed);
     }
 
     public void startTimeLine(){
@@ -50,22 +51,30 @@ public class Ball extends Circle {
             changeYDirection();
             System.out.println("north");
         }
-        if(ballPosX.getValue() >= pane.widthProperty().subtract(this.radiusProperty()).getValue() && ballXSpeed > 0){
+        /*if(ballPosX.getValue() >= pane.widthProperty().subtract(this.radiusProperty()).getValue() && ballXSpeed > 0){
             changeXDirection();
             System.out.println("east");
         }
         if(ballPosX.getValue() <= this.radiusProperty().getValue() && ballXSpeed < 0){
             changeXDirection();
             System.out.println("west");
-        }
+        }*/
     }
 
     public void changeYDirection(){
         ballYSpeed *= -1;
     }
 
-    public void changeXDirection(){
+    public void changeXDirection(Rectangle rectangle){
         ballXSpeed *= -1;
+        if(this.getCenterY() > rectangle.getLayoutY() + rectangle.getHeight() / 2) {
+            ballYSpeed = map(this.getCenterY() - (rectangle.getLayoutY() + rectangle.getHeight() / 2), 0, 50, 0, 8);// * (ballSpeed / 4) + ballSpeed);
+            System.out.println("bounce");
+        }
+        if(this.getCenterY() < rectangle.getLayoutY() + rectangle.getHeight() / 2) {
+            ballYSpeed = -map((rectangle.getLayoutY() + rectangle.getHeight() / 2) - this.getCenterY(), 0, 50, 0, 8);// * (ballSpeed / 4) + ballSpeed);
+            System.out.println("bounce");
+        }
     }
 
     public DoubleProperty getBallPosY(){
@@ -83,8 +92,12 @@ public class Ball extends Circle {
     public void reset(){
         ballPosX.setValue(500);
         ballPosY.setValue(300);
-        ballXSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
-        ballYSpeed = (Math.random() * (ballSpeed / 4) + ballSpeed);
+        ballXSpeed = (Math.random() * 8);
+        ballYSpeed = (Math.random() * 8);
+    }
+
+    private double map(double value, double low1, double high1, double low2, double high2) {
+        return low2 + (value - low1) * (high2 - low2) / (high1 - low1);
     }
 
 }
